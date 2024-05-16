@@ -29,5 +29,7 @@ CREATE GRAPH TYPE lawsGraphType STRICT{
 
 ## Authors
 Andrea Colombo, Politecnico di Milano
+
 Anna Bernasconi, Politecnico di Milano
+
 Stefano Ceri, Politecnico di Milano
