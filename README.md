@@ -15,7 +15,7 @@ CREATE GRAPH TYPE lawsGraphType STRICT{
       (:lawType)-[hasArticleType: has_article]->(:articleType),
       (:lawType)-[hasAttachmentType: has_attachment]->(:attachmentType),
       (:lawType)-[underGovernmentType: under_government]->(:governmentType),
-      (:lawType)-[underLegislatureType: under_legislature]->(:governmentType),
+      (:lawType)-[underLegislatureType: under_legislature]->(:legislatureType),
       (:governmentType)-[succededByType: succeded_by]->(:governmentType),
       (:lawType)-[referenceType: in_preamble]->(:lawType),
       (:articleType)-[referenceType: in_preamble|amends|abrogates|citation]->(:lawType),
