@@ -19,11 +19,11 @@ CREATE GRAPH TYPE lawsGraphType STRICT{
       (:governmentType)-[succededByType: succeded_by]->(:governmentType),
       (:lawType)-[referenceType: in_preamble]->(:lawType),
       (:articleType)-[referenceType: in_preamble|amends|abrogates|citation]->(:lawType),
-      (:articleType)-[referenceType: amends|abrogates|citation]->(:articleType),
-      (:articleType)-[referenceType: amends|abrogates|citation]->(:attachmentType),
+      (:articleType)-[referenceType: amends|abrogates|citation {comma STRING}]->(:articleType),
+      (:articleType)-[referenceType: amends|abrogates|citation {comma STRING}]->(:attachmentType),
       (:attachmentType)-[referenceType: in_preamble|citation]->(:lawType),
-      (:attachmentType)-[referenceType: citation]->(:articleType),
-      (:attachmentType)-[referenceType: citation]->(:attachmentType)
+      (:attachmentType)-[referenceType: citation {comma STRING}]->(:articleType),
+      (:attachmentType)-[referenceType: citation {comma STRING}]->(:attachmentType)
 }
 ```
 
