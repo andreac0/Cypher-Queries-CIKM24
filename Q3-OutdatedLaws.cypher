@@ -7,4 +7,4 @@ WHERE l2.publicationDate > datetime("1992")
 AND l.id IN CitedBefore60s
 WITH COLLECT(l.id) AS StillCited, CitedBefore60s
 UNWIND[x IN CitedBefore60s WHERE NOT ANY(z IN StillCited WHERE z CONTAINS x)] AS OutdatedLaws
-RETURN OutdatedLaws
+RETURN DISTINCT OutdatedLaws
