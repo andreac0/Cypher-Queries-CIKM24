@@ -30,8 +30,9 @@ CREATE GRAPH TYPE lawsGraphType STRICT{
 ## The ILPG
 
 The graph is available for upload in your Neo4J at Zenodo: [Colombo, A., Bernasconi, A., & Ceri, S. (2024). Italian Legislative Property Graph](https://doi.org/10.5281/zenodo.11210265)
+You can import the graph into via the [***cypher-shell***](https://neo4j.com/docs/operations-manual/5/tools/cypher-shell/) and the ***:source*** command.
 
-You can easily upload the graph via the [***cypher-shell***](https://neo4j.com/docs/operations-manual/5/tools/cypher-shell/), via the ***:source*** command.
+You can import the ***style.grass*** file directly into your Neo4J browser to have the personalized style for the Neo4J graph that we present in the paper.
 
 
 ## Authors
